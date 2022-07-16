@@ -3,6 +3,8 @@
 
 import {View, Text, Button} from 'react-native';
 import React from 'react';
+import {connect} from 'react-redux';
+import {add, remove} from '../redux/actions/index';
 
 const Counter = () => {
   return (
@@ -29,4 +31,4 @@ const Counter = () => {
   );
 };
 
-export default Counter;
+export default connect(null, {add, remove})(Counter);
